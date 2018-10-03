@@ -6,7 +6,7 @@ const port = 3001;
 
 const app = express();
 app.use(bodyParser.json());
-
+app.use( express.static( __dirname + '/../public/build' ) );
 app.get('/api/messages', messageController.readMessages)
 app.post('/api/messages', messageController.createMessage);
 app.patch('/api/messages/:id', messageController.updateMessage);
