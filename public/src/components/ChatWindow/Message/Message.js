@@ -30,12 +30,13 @@ export default class Message extends Component {
   }
 
   render() {
-    const { id, text, time, edit, remove } = this.props;
+    const { id, displayName, text, time, edit, remove } = this.props;
     const { editting } = this.state;
-    console.log( id, text );
+    console.log( id, text, displayName );
     return (
       <div className="Message__container">
         <span className="Message__time">{time}</span>
+        <span className="Display_name">@{displayName}</span>
         {
           editting
           ?

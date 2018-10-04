@@ -19,10 +19,13 @@
   opacity: 0.5;
 }
 
+.Display_name{
+  font-size: 15px;
+  opacity: 0.5;
+  display:block;
+}
 .Message__text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  display:block;
 }
 
 .Message__edit {
