@@ -25,10 +25,17 @@ export default class ChatWindow extends Component {
   }
 
   componentDidMount() {
+    // this.interval = setInterval(() => 
     axios.get( url ).then( response => {
       this.setState({ messages: response.data });
-    });
+    })
+    // );
   }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.interval);
+  // }
+  
 
   handleChange( event ) {
     this.setState({ text: event.target.value });
@@ -50,7 +57,6 @@ export default class ChatWindow extends Component {
   }
 
   editMessage( id, text ) {
-    console.log( 'editMessage:', id, text ); 
     axios.put( url + `/${id}`, { text } ).then( response => {
       this.setState({ messages: response.data });
     });

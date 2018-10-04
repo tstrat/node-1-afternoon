@@ -20,12 +20,15 @@
 }
 
 .Display_name{
-  font-size: 15px;
+  top: 15px;
+  left: 10px;
+  font-size: 11px;
   opacity: 0.5;
-  display:block;
 }
 .Message__text {
-  display:block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .Message__edit {

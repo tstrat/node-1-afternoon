@@ -32,7 +32,7 @@ export default class Message extends Component {
   render() {
     const { id, displayName, text, time, edit, remove } = this.props;
     const { editting } = this.state;
-    console.log( id, text, displayName );
+    // console.log( id, text, displayName );
     return (
       <div className="Message__container">
         <span className="Message__time">{time}</span>
